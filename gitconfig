@@ -1,7 +1,7 @@
 [user]
-	name = Yuri Vyatkin
-	email = yurivyatkin@users.noreply.github.com
-	username = yurivyatkin
+  name = Yuri Vyatkin
+  email = yurivyatkin@users.noreply.github.com
+  username = yurivyatkin
 [core]
   editor = vim
   whitespace = off
@@ -11,12 +11,12 @@
 [push]
   default = current
 [alias]
-	bak = !git branch `git br | grep '*' | sed -e 's/* /BAK_/'`
-	br = branch
-	ci = commit
-	co = checkout
-	st = status
-	ignore = update-index --assume-unchanged
-	ignored = !git ls-files -v | grep "^[[:lower:]]"
-	unignore = update-index --no-assume-unchanged
+  bak = !git branch `git br | grep '*' | sed -e 's/* /BAK_/'`
+  br = branch
+  ci = commit
+  co = checkout
+  st = status
+  ignore = update-index --assume-unchanged
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
+  unignore = update-index --no-assume-unchanged
 
