@@ -22,4 +22,3 @@ set nobackup              " rely on version control
 set nowritebackup         " no backup while editing
 set noswapfile            " no swapfiles
 set autoread              " need to do something externally
-

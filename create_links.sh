@@ -31,4 +31,3 @@ if [[ "$UNAMESTR" == 'Linux' ]]; then
 else
   echo "This script is intended to run in Linux!"
 fi
-
