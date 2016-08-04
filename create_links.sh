@@ -8,7 +8,7 @@ if [[ "$UNAMESTR" == 'Linux' ]]; then
   rm ~/.bashrc
   rm ~/.gitconfig
   rm ~/.gitignore_global
-  rm ~/.profile
+  rm ~/.bash_profile
   rm ~/.tmux.conf
   rm ~/.vimrc
   rm ~/.zlogin
@@ -21,7 +21,7 @@ if [[ "$UNAMESTR" == 'Linux' ]]; then
   ln -s $DIR/bashrc ~/.bashrc
   ln -s $DIR/gitconfig ~/.gitconfig
   ln -s $DIR/gitignore_global ~/.gitignore_global
-  ln -s $DIR/profile ~/.profile
+  ln -s $DIR/bash_profile ~/.bash_profile
   ln -s $DIR/tmux.conf ~/.tmux.conf
   ln -s $DIR/vimrc ~/.vimrc
   ln -s $DIR/zlogin ~/.zlogin
