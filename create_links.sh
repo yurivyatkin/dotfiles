@@ -11,7 +11,6 @@ if [[ "$UNAMESTR" == 'Linux' ]]; then
   rm ~/.bash_profile
   rm ~/.tmux.conf
   rm ~/.vimrc
-  rm ~/.zlogin
   rm ~/.zshrc
 
   # Create symbolik links
@@ -24,7 +23,6 @@ if [[ "$UNAMESTR" == 'Linux' ]]; then
   ln -s $DIR/bash_profile ~/.bash_profile
   ln -s $DIR/tmux.conf ~/.tmux.conf
   ln -s $DIR/vimrc ~/.vimrc
-  ln -s $DIR/zlogin ~/.zlogin
   ln -s $DIR/zshrc ~/.zshrc
 
   echo "All linked up."
