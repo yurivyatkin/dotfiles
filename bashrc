@@ -145,3 +145,4 @@ export NVM_DIR="/home/yuri/.nvm"
 
 #Chruby
 source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
