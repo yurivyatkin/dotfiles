@@ -1,5 +1,11 @@
-set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
+
+call plug#begin()
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
 colorscheme desert        " set colorscheme
@@ -22,3 +28,6 @@ set nobackup              " rely on version control
 set nowritebackup         " no backup while editing
 set noswapfile            " no swapfiles
 set autoread              " need to do something externally
+
+" Powerline
+let g:airline_powerline_fonts = 1
