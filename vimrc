@@ -3,6 +3,7 @@ filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
 call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
 set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
