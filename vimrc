@@ -4,6 +4,7 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
