@@ -49,7 +49,7 @@ ZSH_THEME="simple"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-nvm)
+plugins=(git zsh-nvm tmuxinator)
 
 # User configuration
 
@@ -86,6 +86,9 @@ export VISUAL=/usr/bin/vim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Tmuxinator shell completions (see the plugin above) require this:
+alias mux="tmuxinator"
 
 # Powerline
 if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
