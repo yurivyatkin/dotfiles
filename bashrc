@@ -135,6 +135,10 @@ fi
 ## GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
 ## source ~/.bash-git-prompt/gitprompt.sh
 
+# Default editor
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+
 # Powerline
 if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
     source /usr/share/powerline/bindings/bash/powerline.sh

@@ -68,6 +68,10 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+# Default editor
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
