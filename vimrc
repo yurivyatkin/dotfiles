@@ -7,6 +7,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'digitaltoad/vim-pug'
 Plug 'easymotion/vim-easymotion'
+Plug 'tomtom/tcomment_vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 
