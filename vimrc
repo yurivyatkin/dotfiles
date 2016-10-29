@@ -1,5 +1,4 @@
-filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
-
+" Plugins
 call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -8,13 +7,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'digitaltoad/vim-pug'
 call plug#end()
 
+" Settings
 set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
 colorscheme slate         " set colorscheme
 set number                " show line numbers
 set laststatus=2          " last window always has a statusline
-filetype indent on        " activates indenting for files
+filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
 set nohlsearch            " Don't continue to highlight searched phrases.
 set incsearch             " But do highlight as you type your search.
 set ignorecase            " Make searches case-insensitive.
