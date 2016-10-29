@@ -36,3 +36,7 @@ set autoread              " need to do something externally
 " Powerline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='bubblegum'
+
+" Key Mappings
+:let mapleader = "\<Space>"
+map <leader>e :NERDTreeToggle<CR>
