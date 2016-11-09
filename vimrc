@@ -6,6 +6,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'digitaltoad/vim-pug'
+Plug 'wavded/vim-stylus'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
