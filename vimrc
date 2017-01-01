@@ -9,6 +9,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'wavded/vim-stylus'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 
