@@ -13,6 +13,7 @@ if [[ "$UNAMESTR" == 'Linux' ]]; then
   mv ~/.gitconfig $BKPDIR
   mv ~/.gitignore_global $BKPDIR
   mv ~/.bash_profile $BKPDIR
+  mv ~/.ruby-version $BKPDIR
   mv ~/.tmux.conf $BKPDIR
   mv ~/.vimrc $BKPDIR
   mv ~/.zshrc $BKPDIR
@@ -25,6 +26,7 @@ if [[ "$UNAMESTR" == 'Linux' ]]; then
   ln -s $DIR/gitconfig ~/.gitconfig
   ln -s $DIR/gitignore_global ~/.gitignore_global
   ln -s $DIR/bash_profile ~/.bash_profile
+  ln -s $DIR/ruby-version ~/.ruby-version
   ln -s $DIR/tmux.conf ~/.tmux.conf
   ln -s $DIR/vimrc ~/.vimrc
   ln -s $DIR/zshrc ~/.zshrc
