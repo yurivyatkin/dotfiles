@@ -3,15 +3,19 @@
 UNAMESTR=`uname`
 if [[ "$UNAMESTR" == 'Linux' ]]; then
 
-  # Remove existing links
+  # Backup and delete existing links
 
-  rm ~/.bashrc
-  rm ~/.gitconfig
-  rm ~/.gitignore_global
-  rm ~/.bash_profile
-  rm ~/.tmux.conf
-  rm ~/.vimrc
-  rm ~/.zshrc
+  now=$(date +"%Y%m%d")
+  BKPDIR=~/Backups/dotfiles/$now
+  mkdir -p $BKPDIR
+
+  mv ~/.bashrc $BKPDIR
+  mv ~/.gitconfig $BKPDIR
+  mv ~/.gitignore_global $BKPDIR
+  mv ~/.bash_profile $BKPDIR
+  mv ~/.tmux.conf $BKPDIR
+  mv ~/.vimrc $BKPDIR
+  mv ~/.zshrc $BKPDIR
 
   # Create symbolik links
 
