@@ -10,6 +10,7 @@ Plug 'wavded/vim-stylus'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'mattn/emmet-vim'
+Plug 'adelarsq/vim-matchit'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
