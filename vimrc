@@ -9,6 +9,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'wavded/vim-stylus'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
+Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
@@ -46,3 +47,4 @@ let g:airline_theme='bubblegum'
 " Key Mappings
 :let mapleader = "\<Space>"
 map <leader>e :NERDTreeToggle<CR>
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
