@@ -14,6 +14,7 @@ Plug 'adelarsq/vim-matchit'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 
