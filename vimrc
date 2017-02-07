@@ -16,6 +16,8 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 
@@ -53,3 +55,16 @@ let g:airline_theme='bubblegum'
 :let mapleader = "\<Space>"
 map <leader>e :NERDTreeToggle<CR>
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" Fuzzy-find with fzf
+map <C-p> :Files<cr>
+nmap <C-p> :Files<cr>
+
+" View commits in fzf
+nmap <Leader>c :Commits<cr>
+
+" Insert mode completion with fzf
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
