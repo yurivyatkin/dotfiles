@@ -99,8 +99,8 @@ export NVM_DIR="/home/yuri/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+# source /usr/local/share/chruby/chruby.sh
+# source /usr/local/share/chruby/auto.sh
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
