@@ -54,6 +54,9 @@ set hidden
 " Powerline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='bubblegum'
+" Smarter Airline tab line:
+" Automatically displays all buffers when there's only one tab open.
+let g:airline#extensions#tabline#enabled = 1
 
 " Key Mappings
 :let mapleader = "\<Space>"
