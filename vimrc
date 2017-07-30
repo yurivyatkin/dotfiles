@@ -77,3 +77,7 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Buffers navigation
 " Display buffers list. Only the number and cr needed:
 nnoremap <Leader>b :ls<CR>:b<Space>
+
+" Long lines navigation
+nnoremap j gj
+nnoremap k gk
