@@ -46,14 +46,14 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
+  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
+  else
+    color_prompt=
+  fi
 fi
 
 if [ "$color_prompt" = yes ]; then
@@ -154,3 +154,20 @@ source /usr/local/share/chruby/auto.sh
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+# Android
+export ANDROID_HOME=${HOME}/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+# Environment for fixing iPhone photos issue
+# see https://gist.github.com/samrocketman/70dff6ebb18004fc37dc5e33c259a0fc
+
+[ ! -d "$HOME/usr/src" ] && mkdir -p "$HOME/usr/src"
+export PKG_CONFIG_PATH="${HOME}/usr/lib/pkgconfig:${PKG_CONFIG_PATH}"
+export CPATH="${HOME}/usr/include:${CPATH}"
+
+export MANPATH="${HOME}/usr/share/man:${MANPATH}"
+
+export PATH="${HOME}/usr/bin:${PATH}"
+export LD_LIBRARY_PATH="${HOME}/usr/lib:${LD_LIBRARY_PATH}"
