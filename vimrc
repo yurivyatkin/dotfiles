@@ -20,6 +20,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
+Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'wincent/ferret'
@@ -97,3 +98,6 @@ map <C-l> <C-w>l
 " Ferret results navigation
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
+
+" Tagbar Mappings
+nmap <F8> :TagbarToggle<CR>
