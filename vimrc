@@ -95,3 +95,7 @@ map <C-l> <C-w>l
 
 " Tagbar Mappings
 nmap <F8> :TagbarToggle<CR>
+
+" Ferret results navigation
+map <leader>n :cn<cr>
+map <leader>p :cp<cr>
