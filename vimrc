@@ -80,6 +80,9 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Buffers navigation
 " Display buffers list. Only the number and cr needed:
 nnoremap <Leader>b :ls<CR>:b<Space>
+" Navigate between buffers:
+map gn :bn<cr>
+map gp :bp<cr>
 
 " Long lines navigation
 nnoremap j gj
