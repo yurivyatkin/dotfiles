@@ -18,6 +18,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
+Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'wincent/ferret'
@@ -88,3 +89,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Tagbar Mappings
+nmap <F8> :TagbarToggle<CR>
