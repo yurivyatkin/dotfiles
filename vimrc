@@ -2,6 +2,7 @@
 call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jpo/vim-railscasts-theme'
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive'
@@ -29,7 +30,7 @@ call plug#end()
 set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
-colorscheme slate         " set colorscheme
+colorscheme railscasts    " set colorscheme
 set number                " show line numbers
 set laststatus=2          " last window always has a statusline
 filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
