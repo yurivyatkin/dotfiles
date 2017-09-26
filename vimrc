@@ -25,7 +25,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'wincent/ferret'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 call plug#end()
 
@@ -104,10 +103,7 @@ nmap <F8> :TagbarToggle<CR>
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
-"
-" when running at every change you may want to disable quickfix
+" Prettier settings
 let g:prettier#quickfix_enabled = 0
-
-" let g:prettier#autoformat = 0
-" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
-map <leader><S-p> :Prettier<cr>
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
