@@ -1,5 +1,6 @@
 " Plugins
 call plug#begin()
+Plug 'wikitopian/hardmode'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jpo/vim-railscasts-theme'
@@ -104,3 +105,7 @@ map <leader>p :cp<cr>
 
 " Tagbar Mappings
 nmap <F8> :TagbarToggle<CR>
+
+" Hardmode
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
