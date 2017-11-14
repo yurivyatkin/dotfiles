@@ -154,3 +154,14 @@ source /usr/local/share/chruby/auto.sh
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+# Environment for fixing iPhone photos issue
+# see https://gist.github.com/samrocketman/70dff6ebb18004fc37dc5e33c259a0fc
+[ ! -d "$HOME/usr/src"  ] && mkdir -p "$HOME/usr/src"
+export PKG_CONFIG_PATH="${HOME}/usr/lib/pkgconfig:${PKG_CONFIG_PATH}"
+export CPATH="${HOME}/usr/include:${CPATH}"
+
+export MANPATH="${HOME}/usr/share/man:${MANPATH}"
+
+export PATH="${HOME}/usr/bin:${PATH}"
+export LD_LIBRARY_PATH="${HOME}/usr/lib:${LD_LIBRARY_PATH}"
