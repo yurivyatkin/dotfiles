@@ -25,6 +25,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
+Plug 'ternjs/tern_for_vim'
+Plug 'Valloric/YouCompleteMe'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'wincent/ferret'
@@ -109,3 +111,16 @@ nmap <F8> :TagbarToggle<CR>
 " Hardmode
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
+" Tern settings
+" http://www.dotnetsurfers.com/blog/2016/02/08/using-vim-as-a-javascript-ide
+" - enable keyboard shortcuts
+let g:tern_map_keys=1
+" - show argument hints
+let g:tern_show_argument_hints='on_hold'
+" - disable showing location after rename
+let g:tern_show_loc_after_rename=0
+" - disable mode indication to see arguments hints
+:set noshowmode
+" - reduce the update time to 1s
+:set updatetime=1000
