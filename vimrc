@@ -19,6 +19,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'mattn/emmet-vim'
 Plug 'adelarsq/vim-matchit'
 Plug 'pangloss/vim-javascript'
+Plug 'heavenshell/vim-jsdoc'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
@@ -124,3 +125,6 @@ let g:tern_show_loc_after_rename=0
 :set noshowmode
 " - reduce the update time to 1s
 :set updatetime=1000
+
+" JsDoc settings
+nmap <silent> <leader>j ?function<cr>:noh<cr><Plug>(jsdoc)
