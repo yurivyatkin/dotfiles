@@ -110,3 +110,10 @@ source /usr/local/share/chruby/auto.sh
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+# Spaceship prompt:
+fpath=($fpath "/home/yuri/.zfunctions")
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
