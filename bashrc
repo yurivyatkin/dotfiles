@@ -165,3 +165,5 @@ export MANPATH="${HOME}/usr/share/man:${MANPATH}"
 
 export PATH="${HOME}/usr/bin:${PATH}"
 export LD_LIBRARY_PATH="${HOME}/usr/lib:${LD_LIBRARY_PATH}"
+
+set -o vi
