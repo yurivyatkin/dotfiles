@@ -27,8 +27,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'wincent/ferret'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'prettier/vim-prettier', {
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 call plug#end()
 
 " Settings
@@ -75,6 +73,12 @@ let g:user_emmet_settings = {
     \  },
   \}
 
+" Prettier with ALE, see https://prettier.io/docs/en/vim.html
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1
+
 " Fuzzy-find with fzf
 map <C-p> :Files<cr>
 nmap <C-p> :Files<cr>
@@ -111,11 +115,6 @@ nmap <F8> :TagbarToggle<CR>
 " Ferret results navigation
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
-
-" Prettier settings
-let g:prettier#quickfix_enabled = 0
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
 
 " Tern settings
 " http://www.dotnetsurfers.com/blog/2016/02/08/using-vim-as-a-javascript-ide
