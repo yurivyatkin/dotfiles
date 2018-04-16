@@ -12,10 +12,10 @@ Plug 'digitaltoad/vim-pug'
 Plug 'wavded/vim-stylus'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
-Plug 'mattn/emmet-vim'
 Plug 'adelarsq/vim-matchit'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'w0rp/ale'
@@ -67,7 +67,13 @@ let g:airline#extensions#tabline#enabled = 1
 " Key Mappings
 :let mapleader = "\<Space>"
 map <leader>e :NERDTreeToggle<CR>
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
 
 " Fuzzy-find with fzf
 map <C-p> :Files<cr>
