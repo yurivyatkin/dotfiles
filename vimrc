@@ -71,7 +71,15 @@ let g:airline#extensions#tabline#enabled = 1
 " Key Mappings
 :let mapleader = "\<Space>"
 map <leader>e :NERDTreeToggle<CR>
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" Emmet, via https://drivy.engineering/setting-up-vim-for-react/
+" (notice, that it works with comma pressed immediately after Tab)
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
 
 " Fuzzy-find with fzf
 map <C-p> :Files<cr>
