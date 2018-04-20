@@ -58,3 +58,6 @@ _yardoc
 # Vim backup and swap files
 *.swp
 *.*~
+
+# Avn - Automatic Node Version
+.node-version
