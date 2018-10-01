@@ -91,6 +91,8 @@ export VISUAL=/usr/bin/vim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ghn="git_next" # the function is defined below
+alias ghp="git_prev" # the function is defined below
 
 # Tmuxinator shell completions (see the plugin above) require this:
 alias mux="tmuxinator"
@@ -118,3 +120,16 @@ fpath=($fpath "/home/yuri/.zfunctions")
 autoload -U promptinit; promptinit
 prompt spaceship
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+# Git history traversing, from https://stackoverflow.com/a/23172256/1008341
+# - checkout prev (older) revision:
+git_prev() {
+    git checkout HEAD~
+}
+# - checkout next (newer) commit:
+git_next() {
+    BRANCH=`git show-ref | grep $(git show-ref -s -- HEAD) | sed 's|.*/\(.*\)|\1|' | grep -v HEAD | sort | uniq`
+    HASH=`git rev-parse $BRANCH`
+    PREV=`git rev-list --topo-order HEAD..$HASH | tail -1`
+    git checkout $PREV
+}
