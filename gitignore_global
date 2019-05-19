@@ -58,3 +58,6 @@ _yardoc
 # Vim backup and swap files
 *.swp
 *.*~
+
+# VSCode stuff
+.vscode
