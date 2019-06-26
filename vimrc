@@ -128,8 +128,8 @@ map <leader>p :cp<cr>
 nmap <F8> :TagbarToggle<CR>
 
 " Hardmode
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 " Tern settings
 " http://www.dotnetsurfers.com/blog/2016/02/08/using-vim-as-a-javascript-ide
