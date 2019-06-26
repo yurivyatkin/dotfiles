@@ -61,3 +61,7 @@ _yardoc
 
 # Avn - Automatic Node Version
 .node-version
+
+# VSCode
+.vscode
+
