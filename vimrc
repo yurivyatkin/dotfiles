@@ -34,6 +34,7 @@ Plug 'wincent/ferret'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'qpkorr/vim-renamer'
 Plug 'jpalardy/vim-slime'
+Plug 'luochen1990/rainbow'
 call plug#end()
 
 " Settings
@@ -151,3 +152,6 @@ nmap <silent> <leader>j ?function<cr>:noh<cr><Plug>(jsdoc)
 " Vim-slime settings
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
+
+" Rainbow parentheses 'luochen1990/rainbow'
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
