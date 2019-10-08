@@ -33,6 +33,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'wincent/ferret'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'qpkorr/vim-renamer'
+Plug 'jpalardy/vim-slime'
 call plug#end()
 
 " Settings
@@ -146,3 +147,7 @@ let g:tern_show_loc_after_rename=0
 
 " JsDoc settings
 nmap <silent> <leader>j ?function<cr>:noh<cr><Plug>(jsdoc)
+
+" Vim-slime settings
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
