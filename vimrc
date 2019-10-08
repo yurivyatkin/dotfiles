@@ -28,6 +28,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'wincent/ferret'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'qpkorr/vim-renamer'
+Plug 'jpalardy/vim-slime'
 call plug#end()
 
 " Settings
@@ -131,3 +132,7 @@ let g:tern_show_loc_after_rename=0
 :set noshowmode
 " - reduce the update time to 1s
 :set updatetime=1000
+
+" Vim-slime settings
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
