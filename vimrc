@@ -87,6 +87,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 " Standard for Ruby
 let g:ale_linters = {'ruby': ['standardrb']}
 let g:ale_fixers = {'ruby': ['standardrb']}
+let g:ruby_indent_assignment_style = 'variable' " compatibility with vim-ruby
 " Make the key binding as in VSCode:
 map <C-S-i> :ALEFix<cr>
 
