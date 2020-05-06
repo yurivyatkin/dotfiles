@@ -32,6 +32,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'luochen1990/rainbow'
 Plug 'reasonml-editor/vim-reason-plus'
 Plug 'mechatroner/rainbow_csv'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 " Settings
