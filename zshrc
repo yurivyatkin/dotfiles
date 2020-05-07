@@ -91,6 +91,8 @@ export VISUAL=/usr/bin/vim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
 
 # Tmuxinator shell completions (see the plugin above) require this:
 alias mux="tmuxinator"
