@@ -94,6 +94,7 @@ export VISUAL=/usr/bin/vim
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
 alias dcr="docker-compose run"
+alias dce="docker-compose exec"
 
 # Tmuxinator shell completions (see the plugin above) require this:
 alias mux="tmuxinator"
