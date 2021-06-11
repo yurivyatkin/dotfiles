@@ -22,3 +22,5 @@
 	quick-stats = ! /usr/local/bin/git-quick-stats
 [init]
 	templatedir = /home/yuri/.git-templates
+[credential]
+	helper = store
