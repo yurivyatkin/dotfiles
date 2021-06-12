@@ -90,6 +90,9 @@ let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
 let g:ale_fix_on_save = 0
 let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_linters = {
+      \ 'clojure': ['clj-kondo'],
+      \}
 
 " Make the key binding as in VSCode:
 map <C-S-i> :ALEFix<cr>
