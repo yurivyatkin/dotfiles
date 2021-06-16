@@ -37,6 +37,9 @@ Plug 'jpalardy/vim-slime'
 Plug 'luochen1990/rainbow'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-glaive'
+Plug 'google/vim-codefmt'
 call plug#end()
 
 " Settings
