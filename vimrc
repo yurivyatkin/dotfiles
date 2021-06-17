@@ -35,7 +35,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'qpkorr/vim-renamer'
 Plug 'jpalardy/vim-slime'
 Plug 'luochen1990/rainbow'
-Plug 'guns/vim-sexp'
+Plug 'guns/vim-sexp', {'for': 'clojure'} 
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-glaive'
