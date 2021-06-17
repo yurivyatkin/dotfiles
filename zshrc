@@ -119,6 +119,8 @@ fpath=($fpath "/home/yuri/.zfunctions")
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+
+# AVN
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 # Git history traversing, from https://stackoverflow.com/a/23172256/1008341
@@ -133,3 +135,8 @@ git_next() {
     PREV=`git rev-list --topo-order HEAD..$HASH | tail -1`
     git checkout $PREV
 }
+
+# For vim-iced
+if [[ -d "$HOME/.vim/plugged/vim-iced/bin" ]] ; then
+    PATH="$PATH:$HOME/.vim/plugged/vim-iced/bin";
+fi
