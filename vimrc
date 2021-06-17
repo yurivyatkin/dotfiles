@@ -40,6 +40,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-glaive'
 Plug 'google/vim-codefmt'
+Plug 'liquidz/vim-iced', {'for': 'clojure'}
 call plug#end()
 
 " Settings
@@ -163,3 +164,7 @@ let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-o
 
 " Rainbow parentheses 'luochen1990/rainbow'
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+
+" Enable vim-iced's default key mapping
+" This is recommended for newbies
+let g:iced_enable_default_key_mappings = v:true
