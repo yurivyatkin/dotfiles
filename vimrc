@@ -41,6 +41,8 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-glaive'
 Plug 'google/vim-codefmt'
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'liquidz/vim-iced-asyncomplete', {'for': 'clojure'}
 call plug#end()
 
 " Settings
