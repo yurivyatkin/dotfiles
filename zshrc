@@ -49,7 +49,12 @@ ZSH_THEME="simple"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-nvm tmuxinator)
+plugins=(
+  git 
+  tmuxinator
+  vi-mode
+  zsh-nvm 
+)
 
 # User configuration
 
@@ -86,6 +91,8 @@ export VISUAL=/usr/bin/vim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ghn="git_next" # the function is defined below
+alias ghp="git_prev" # the function is defined below
 
 # Tmuxinator shell completions (see the plugin above) require this:
 alias mux="tmuxinator"
@@ -99,9 +106,37 @@ export NVM_DIR="/home/yuri/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+# source /usr/local/share/chruby/chruby.sh
+# source /usr/local/share/chruby/auto.sh
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+# Spaceship prompt
+fpath=($fpath "/home/yuri/.zfunctions")
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
+# AVN
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+# Git history traversing, from https://stackoverflow.com/a/23172256/1008341
+# - checkout prev (older) revision:
+git_prev() {
+    git checkout HEAD~
+}
+# - checkout next (newer) commit:
+git_next() {
+    BRANCH=`git show-ref | grep $(git show-ref -s -- HEAD) | sed 's|.*/\(.*\)|\1|' | grep -v HEAD | sort | uniq`
+    HASH=`git rev-parse $BRANCH`
+    PREV=`git rev-list --topo-order HEAD..$HASH | tail -1`
+    git checkout $PREV
+}
+
+# For vim-iced
+if [[ -d "$HOME/.vim/plugged/vim-iced/bin" ]] ; then
+    PATH="$PATH:$HOME/.vim/plugged/vim-iced/bin";
+fi

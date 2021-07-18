@@ -28,3 +28,11 @@ fi
 
 # Powerline shell changes
 if [ -d "$HOME/.local/bin" ] ; then PATH="$HOME/.local/bin:$PATH"; fi
+
+# AVN
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
+
+# For vim-iced
+if [ -d "$HOME/.vim/plugged/vim-iced/bin" ] ; then
+    PATH="$PATH:$HOME/.vim/plugged/vim-iced/bin";
+fi
