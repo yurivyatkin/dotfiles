@@ -1,6 +1,6 @@
 [user]
   name = Yuri Vyatkin
-  email = yurivyatkin@users.noreply.github.com
+  email = yuri.vyatkin@users.noreply.github.com
   username = yurivyatkin
 [core]
   editor = vim
@@ -19,3 +19,8 @@
   ignore = update-index --assume-unchanged
   ignored = !git ls-files -v | grep "^[[:lower:]]"
   unignore = update-index --no-assume-unchanged
+	quick-stats = ! /usr/local/bin/git-quick-stats
+[init]
+	templatedir = /home/yuri/.git-templates
+[credential]
+	helper = store
