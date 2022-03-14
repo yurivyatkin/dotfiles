@@ -129,4 +129,8 @@ fpath=($fpath "/home/yuri/.zfunctions")
 autoload -U promptinit; promptinit
 prompt spaceship
 
+# Set JAVA_HOME 
+if [[ -f ~/.asdf/plugins/java/set-java-home.zsh  ]] ; then
+  . ~/.asdf/plugins/java/set-java-home.zsh
+fi
 
