@@ -101,13 +101,6 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
-# Spaceship prompt
-fpath=($fpath "/home/yuri/.zfunctions")
-
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
-
 
 # Git history traversing, from https://stackoverflow.com/a/23172256/1008341
 # - checkout prev (older) revision:
@@ -129,3 +122,11 @@ fi
 
 # ASDF
 . $HOME/.asdf/asdf.sh
+
+fpath=($fpath "/home/yuri/.zfunctions")
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
+
