@@ -99,8 +99,8 @@ fi
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-
+# https://hschne.at/2020/04/25/creating-a-fuzzy-shell-with-fzf-and-friends.html
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 # Git history traversing, from https://stackoverflow.com/a/23172256/1008341
 # - checkout prev (older) revision:
