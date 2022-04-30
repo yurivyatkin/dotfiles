@@ -94,6 +94,7 @@ let g:user_emmet_settings = {
 " Prettier with ALE, see https://prettier.io/docs/en/vim.html
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['ruby'] = ['rubocop']
 let g:ale_fix_on_save = 0
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_linters = {
