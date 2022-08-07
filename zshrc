@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/yuri/.oh-my-zsh"
+  export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -123,9 +123,8 @@ fi
 # ASDF
 . $HOME/.asdf/asdf.sh
 
-fpath=($fpath "/home/yuri/.zfunctions")
-
 # Set Spaceship ZSH as a prompt
+[ -f ~/.zfunctions ] && fpath=($fpath "~/.zfunctions")
 autoload -U promptinit; promptinit
 prompt spaceship
 
@@ -133,4 +132,3 @@ prompt spaceship
 if [[ -f ~/.asdf/plugins/java/set-java-home.zsh  ]] ; then
   . ~/.asdf/plugins/java/set-java-home.zsh
 fi
-
