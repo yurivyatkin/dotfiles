@@ -43,6 +43,10 @@ Plug 'google/vim-codefmt'
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'liquidz/vim-iced-asyncomplete', {'for': 'clojure'}
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ } 
 call plug#end()
 
 " Settings
@@ -94,6 +98,7 @@ let g:user_emmet_settings = {
 " Prettier with ALE, see https://prettier.io/docs/en/vim.html
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['ruby'] = ['rubocop']
 let g:ale_fix_on_save = 0
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_linters = {
@@ -170,3 +175,8 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 " Enable vim-iced's default key mapping
 " This is recommended for newbies
 let g:iced_enable_default_key_mappings = v:true
+
+" LanguageClient
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['solargraph', 'stdio'],
+    \ }

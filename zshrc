@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/yuri/.oh-my-zsh
+  export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -51,9 +51,7 @@ ZSH_THEME="simple"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git 
-  tmuxinator
   vi-mode
-  zsh-nvm 
 )
 
 # User configuration
@@ -94,34 +92,15 @@ export VISUAL=/usr/bin/vim
 alias ghn="git_next" # the function is defined below
 alias ghp="git_prev" # the function is defined below
 
-# Tmuxinator shell completions (see the plugin above) require this:
-alias mux="tmuxinator"
-
 # Powerline
 if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
     source /usr/share/powerline/bindings/zsh/powerline.zsh
 fi
 
-export NVM_DIR="/home/yuri/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# Chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-
-# Spaceship prompt
-fpath=($fpath "/home/yuri/.zfunctions")
-
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
-
-# AVN
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+# https://hschne.at/2020/04/25/creating-a-fuzzy-shell-with-fzf-and-friends.html
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 # Git history traversing, from https://stackoverflow.com/a/23172256/1008341
 # - checkout prev (older) revision:
@@ -139,4 +118,17 @@ git_next() {
 # For vim-iced
 if [[ -d "$HOME/.vim/plugged/vim-iced/bin" ]] ; then
     PATH="$PATH:$HOME/.vim/plugged/vim-iced/bin";
+fi
+
+# ASDF
+. $HOME/.asdf/asdf.sh
+
+# Set Spaceship ZSH as a prompt
+[ -f ~/.zfunctions ] && fpath=($fpath "~/.zfunctions")
+autoload -U promptinit; promptinit
+prompt spaceship
+
+# Set JAVA_HOME 
+if [[ -f ~/.asdf/plugins/java/set-java-home.zsh  ]] ; then
+  . ~/.asdf/plugins/java/set-java-home.zsh
 fi

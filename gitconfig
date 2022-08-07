@@ -19,8 +19,8 @@
   ignore = update-index --assume-unchanged
   ignored = !git ls-files -v | grep "^[[:lower:]]"
   unignore = update-index --no-assume-unchanged
-	quick-stats = ! /usr/local/bin/git-quick-stats
+  quick-stats = ! /usr/local/bin/git-quick-stats
 [init]
-	templatedir = /home/yuri/.git-templates
+  templatedir = /home/yuri/.git-templates
 [credential]
-	helper = store
+  helper = store
